@@ -1,0 +1,321 @@
+
+*{
+    
+    font-weight: 100;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.battle-screen{
+    height: 75vh;
+    width: 100%;
+    background-color: rgb(100, 100, 100);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    
+}
+
+#control button{
+    font-size: 1.5rem;
+}
+
+
+#text img {
+    padding-right: 10px;
+}
+
+
+.battle-menu{
+    
+    height: 25vh;
+    width: 100%;
+    background-color: #53462f;
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#text{
+    font-size: 20px;
+    width: 45%;
+    height: 80%;
+    margin: 16px;
+    padding-left: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+#controls{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80%;
+
+}
+
+
+#controls button{
+    
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 20px;
+
+}
+
+#controls button:hover{
+    background-color: #d0d0d0;
+}
+
+#controls button img{
+    
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    
+    
+}
+
+
+/* Enemy screen*/
+#enemyrow{
+    background-color: rgb(84, 90, 105);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    
+}
+
+
+
+
+#boss img{
+    position: relative;
+    left: 90px;
+    top: -200px;
+    width: 250px;
+    height: 300px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+#monster-info{
+    background-color: rgb(109, 105, 100);
+    height: 150px;
+    width: 400px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 200px;
+}
+
+
+/* Ally screen*/
+
+
+
+#allyrow{
+    background-color: rgb(84, 90, 105);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end
+    
+}
+
+
+
+
+#player img{
+    position: relative;
+    left: 90px;
+    top: -200px;
+    width: 200px;
+    height: 300px;
+}
+
+
+#inv-mini{
+    
+    height: 80%;
+    width: 100px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#inv-mini img{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+#foodheal{
+    color: #ce0000;
+    position: relative;
+    top: 6px;
+    left: -2px;
+    
+}
+#coins{
+    color: #2eb629;
+    position: relative;
+    top: 3px;
+    left: 0px;
+}
+/* Both screens*/
+
+#allyrow, #enemyrow{
+    
+    width: 100%;
+    
+    
+    
+    
+}
+#allyrow{
+    height: 50%;
+}
+#enemyrow{
+    height: 90%;
+}
+
+
+
+
+
+
+
+.base-platform{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(84, 90, 105);
+    border-radius: 50%;
+    
+
+}
+
+
+
+#player-info{
+    background-color: rgb(109, 105, 100);
+    height: 120px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    
+    
+
+}
+
+#player-info > h1, h2, p, div  #monster-info > h1, h2, p, div  {
+    margin: 0;
+    padding: 0;
+}
+
+#player-info > h1, #monster-info > h1{
+    font-size: 1.5rem;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-hp-bar{
+    width: 60%;
+    height: 10px;
+    margin: 5px;
+    background-color: rgba(28, 167, 0, 0.568);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#lvl{
+    color: rgb(235, 47, 0);
+}
+
+#enemyHpbar{
+    width: 60%;
+    height: 10px;
+    margin: 5px;
+    color: rgba(28, 167, 0, 0.568);
+    border-radius: 8px;
+
+}
+
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-800%);
+        
+    }
+    100% {
+        transform: translateX(0);
+        
+    }
+
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(800%);
+        
+    }
+    100% {
+        transform: translateX(0);
+        
+    }
+
+}
+
+
+
+.boss-slide-in{
+
+    animation: slideInRight 4s;
+    filter: brightness(30%);
+    
+}
+
+.player-slide-in{
+
+    animation: slideInLeft 4s;
+    filter: brightness(30%);
+    
+}
+
+
